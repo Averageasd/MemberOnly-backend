@@ -13,7 +13,7 @@ const messageRoute = require('../routes/message');
 const memberRoute = require('../routes/member');
 
 index.use(cors({
-    origin: true,
+    origin: '*',
     credentials: true,
 }));
 index.use(express.json());
@@ -32,7 +32,7 @@ index.use(session({
     resave: false,
     saveUninitialized: true,
     cookie: {
-        secure: true,
+        secure: false,
         maxAge: 1000 * 60 * 60 * 24 // Equals 1 day
     }
 }));
