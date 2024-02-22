@@ -4,18 +4,20 @@ const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const session = require('express-session');
-
 const index = express();
+
+index.use(cors({
+    origin: 'https://member-only-backend.vercel.app/',
+    credentials: true,
+}));
+
 const signupRoute = require('../routes/signup');
 const loginRoute = require('../routes/login');
 const logoutRoute = require('../routes/logout');
 const messageRoute = require('../routes/message');
 const memberRoute = require('../routes/member');
 
-index.use(cors({
-    origin: 'https://member-only-backend.vercel.app/',
-    credentials: true,
-}));
+
 index.use(express.json());
 index.use(express.urlencoded({extended: false}));
 
