@@ -34,7 +34,6 @@ index.use(session({
     resave: false,
     saveUninitialized: true,
     cookie: {
-        secure: true,
         maxAge: 1000 * 60 * 60 * 24 // Equals 1 day
     }
 }));
