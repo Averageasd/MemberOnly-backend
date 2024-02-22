@@ -14,7 +14,6 @@ const memberRoute = require('../routes/member');
 
 index.use(cors({
     credentials: true,
-    origin: "*"
 }));
 index.use(express.json());
 index.use(express.urlencoded({extended: false}));
