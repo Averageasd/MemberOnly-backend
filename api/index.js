@@ -12,9 +12,7 @@ const logoutRoute = require('../routes/logout');
 const messageRoute = require('../routes/message');
 const memberRoute = require('../routes/member');
 
-index.use(cors({
-    credentials: true,
-}));
+index.use(cors());
 index.use(express.json());
 index.use(express.urlencoded({extended: false}));
 
