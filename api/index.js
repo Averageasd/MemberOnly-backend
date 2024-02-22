@@ -13,7 +13,7 @@ const messageRoute = require('../routes/message');
 const memberRoute = require('../routes/member');
 
 index.use(cors({
-    origin: true,
+    origin: 'https://member-only-backend.vercel.app/',
     credentials: true,
 }));
 index.use(express.json());
