@@ -13,7 +13,7 @@ const messageRoute = require('../routes/message');
 const memberRoute = require('../routes/member');
 
 index.use(cors({
-    origin: '*',
+    origin: true,
     credentials: true,
 }));
 index.use(express.json());
