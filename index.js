@@ -6,11 +6,7 @@ const mongoose = require('mongoose');
 const session = require('express-session');
 const index = express();
 
-index.use(cors({
-    origin: true,
-    methods: ['POST', 'GET'],
-    credentials: true,
-}));
+index.use(cors());
 
 const signupRoute = require('./routes/signup');
 const loginRoute = require('./routes/login');
