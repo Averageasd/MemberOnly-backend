@@ -7,8 +7,8 @@ const session = require('express-session');
 const index = express();
 
 index.use(cors({
-    origin: ['https://member-only-backend.vercel.app/'],
-    methods:['POST', 'GET'],
+    origin: ['https://member-only-frontend.vercel.app/'],
+    methods: ['POST', 'GET'],
     credentials: true,
 }));
 
@@ -56,6 +56,6 @@ index.use('/', logoutRoute);
 index.use('/', messageRoute);
 index.use('/', memberRoute);
 
-index.listen(3000, '0.0.0.0',function () {
+index.listen(3000, '0.0.0.0', function () {
     console.log('Listening on port 3000');
 });
