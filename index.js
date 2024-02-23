@@ -7,7 +7,7 @@ const session = require('express-session');
 const index = express();
 
 index.use(cors({
-    origin: "",
+    origin: "https://memberonly-frontend-production.up.railway.app/",
     methods: ['POST', 'GET'],
     credentials: true,
 }));
