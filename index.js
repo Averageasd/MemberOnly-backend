@@ -7,16 +7,16 @@ const session = require('express-session');
 const index = express();
 
 index.use(cors({
-    origin: ['https://member-only-frontend.vercel.app/'],
+    origin: "",
     methods: ['POST', 'GET'],
     credentials: true,
 }));
 
-const signupRoute = require('../routes/signup');
-const loginRoute = require('../routes/login');
-const logoutRoute = require('../routes/logout');
-const messageRoute = require('../routes/message');
-const memberRoute = require('../routes/member');
+const signupRoute = require('./routes/signup');
+const loginRoute = require('./routes/login');
+const logoutRoute = require('./routes/logout');
+const messageRoute = require('./routes/message');
+const memberRoute = require('./routes/member');
 
 
 index.use(express.json());
@@ -39,7 +39,7 @@ index.use(session({
     }
 }));
 
-require('../config/passportConfig');
+require('./config/passportConfig');
 
 // work on every route
 index.use(passport.initialize());
