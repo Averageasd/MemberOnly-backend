@@ -56,6 +56,6 @@ index.use('/', logoutRoute);
 index.use('/', messageRoute);
 index.use('/', memberRoute);
 
-index.listen(3000, '0.0.0.0', function () {
+index.listen(process.env.PORT, '0.0.0.0', function () {
     console.log('Listening on port 3000');
 });
