@@ -7,7 +7,7 @@ const session = require('express-session');
 const index = express();
 
 index.use(cors({
-    origin:true
+    origin: true,
 }));
 
 const signupRoute = require('./routes/signup');
