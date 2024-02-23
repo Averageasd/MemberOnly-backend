@@ -29,7 +29,7 @@ async function main() {
 
 main().catch((err) => console.log(err));
 
-index.use(cookieParser);
+index.use(cookieParser());
 
 index.use(session({
     secret: process.env.SECRET,
