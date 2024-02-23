@@ -34,6 +34,10 @@ index.use(session({
     resave: false,
     saveUninitialized: true,
     cookie: {
+        secure: true,
+        httpOnly: true,
+        path: "/",
+        sameSite: 'none',
         maxAge: 1000 * 60 * 60 * 24 // Equals 1 day
     }
 }));
