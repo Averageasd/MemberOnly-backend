@@ -3,6 +3,7 @@ const express = require('express');
 const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
+const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const index = express();
 
@@ -28,6 +29,7 @@ async function main() {
 
 main().catch((err) => console.log(err));
 
+index.use(cookieParser);
 
 index.use(session({
     secret: process.env.SECRET,
