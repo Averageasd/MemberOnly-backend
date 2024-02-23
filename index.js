@@ -8,6 +8,7 @@ const index = express();
 
 index.use(cors({
     origin: true,
+    credentials: true
 }));
 
 const signupRoute = require('./routes/signup');
