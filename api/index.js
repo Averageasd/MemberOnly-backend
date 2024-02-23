@@ -7,7 +7,8 @@ const session = require('express-session');
 const index = express();
 
 index.use(cors({
-    origin: true,
+    origin: ['https://member-only-backend.vercel.app/'],
+    methods:['POST', 'GET'],
     credentials: true,
 }));
 
