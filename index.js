@@ -8,7 +8,7 @@ const session = require('express-session');
 const index = express();
 
 index.use(cors({
-    origin: 'https://memberonly-frontend-production.up.railway.app',
+    origin: 'http://localhost:5173',
     credentials: true
 }));
 
@@ -30,7 +30,7 @@ async function main() {
 main().catch((err) => console.log(err));
 
 index.use(cookieParser());
-
+index.set('trust proxy', 1);
 index.use(session({
     secret: process.env.SECRET,
     resave: false,
@@ -60,6 +60,6 @@ index.use('/', logoutRoute);
 index.use('/', messageRoute);
 index.use('/', memberRoute);
 
-index.listen(process.env.PORT, '0.0.0.0', function () {
+index.listen(process.env.PORT, function () {
     console.log('Listening on port 3000');
 });
