@@ -8,7 +8,7 @@ const session = require('express-session');
 const index = express();
 
 index.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://memberonly-frontend-production.up.railway.app',
     credentials: true
 }));
 
