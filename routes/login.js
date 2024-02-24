@@ -6,7 +6,7 @@ const User = require('../model/User');
 router.get('/login', (req, res, next) => {
     res.status(200).json({msg: 'Go to login page'});
 })
-router.post('/login', passport.authenticate('local'), customLoginHandler);
+router.post('/login', passport.authenticate('local', {failureRedirect: '/login-failure'}), customLoginHandler);
 
 function customLoginHandler(req, res) {
     console.log('get here');
