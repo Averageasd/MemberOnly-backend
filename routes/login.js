@@ -9,6 +9,7 @@ router.get('/login', (req, res, next) => {
 router.post('/login', passport.authenticate('local'), customLoginHandler);
 
 function customLoginHandler(req, res) {
+    console.log('get here');
     res.status(200).json({status: 200, user: req.user});
 }
 
