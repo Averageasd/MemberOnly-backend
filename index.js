@@ -8,7 +8,7 @@ const session = require('express-session');
 const index = express();
 
 index.use(cors({
-    origin: 'https://memberonly-frontend-production.up.railway.app',
+    origin: 'https://main--thunderous-brigadeiros-fca384.netlify.app',
     credentials: true
 }));
 
